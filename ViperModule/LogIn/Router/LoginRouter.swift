@@ -5,27 +5,29 @@
 //  Created by dante on 30/01/2021.
 //
 
-import Foundation
+import UIKit
 
 class LoginRouter: PresenterToRouterProtocol {
+    var presenter: RouterToPresenterProtocol?
     func createModule() -> LoginViewController {
         let loginView = LoginViewController(nibName: "LoginViewController", bundle: nil)
         let presenter = LoginPresenter()
         let interactor = Interactor()
-        let router = LoginRouter()
 
+        self.presenter = presenter
         loginView.presenter = presenter
         presenter.loginView = loginView
-        presenter.router = router
+        presenter.router = self
         presenter.interactor = interactor
         interactor.presenter = presenter
+
+        self.presenter?.setUpDataBase()
 
         return loginView
     }
 
-    func showEconomicIndicesView() {
-
+    func showEconomicIndicesView(navVC: UINavigationController) {
+        // let economicIndicesModule = EconomicIndices.createmodule
+        // navVC.pushViewController(economicIndicesModule)
     }
-
-//    let myViewController = MyViewController(nibName: "MyViewController", bundle: nil)
 }

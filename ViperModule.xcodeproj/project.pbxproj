@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7309B5B0E712E389C949A911 /* Pods_ViperModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB98C77B59343EEF29164D /* Pods_ViperModule.framework */; };
 		7A908269460E623F931FD583 /* Pods_ViperModule_ViperModuleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC42A11297F21362CBC37E8 /* Pods_ViperModule_ViperModuleTests.framework */; };
+		FE008C3125C6EC0A00845DE6 /* appLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C3025C6EC0A00845DE6 /* appLauncher.swift */; };
+		FE008C5925C7268600845DE6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C5825C7268600845DE6 /* CoreDataManager.swift */; };
+		FE008C6625C7365100845DE6 /* AESEncrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C6525C7365100845DE6 /* AESEncrypter.swift */; };
 		FEE434FB25C59C5800B15AA9 /* ViperModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE434F125C59C5700B15AA9 /* ViperModule.framework */; };
 		FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE434FF25C59C5800B15AA9 /* ViperModuleTests.swift */; };
 		FEE4350225C59C5800B15AA9 /* ViperModule.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE434F425C59C5700B15AA9 /* ViperModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -38,6 +41,9 @@
 		5EF9E793B765DDA5900698BD /* Pods-ViperModule-ViperModuleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperModule-ViperModuleTests.release.xcconfig"; path = "Target Support Files/Pods-ViperModule-ViperModuleTests/Pods-ViperModule-ViperModuleTests.release.xcconfig"; sourceTree = "<group>"; };
 		70AB98C77B59343EEF29164D /* Pods_ViperModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E647855C8A50F65D000D5672 /* Pods-ViperModule-ViperModuleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperModule-ViperModuleTests.debug.xcconfig"; path = "Target Support Files/Pods-ViperModule-ViperModuleTests/Pods-ViperModule-ViperModuleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE008C3025C6EC0A00845DE6 /* appLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appLauncher.swift; sourceTree = "<group>"; };
+		FE008C5825C7268600845DE6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FE008C6525C7365100845DE6 /* AESEncrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESEncrypter.swift; sourceTree = "<group>"; };
 		FEE434F125C59C5700B15AA9 /* ViperModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViperModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE434F425C59C5700B15AA9 /* ViperModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViperModule.h; sourceTree = "<group>"; };
 		FEE434F525C59C5700B15AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +100,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FE008C2F25C6EB2B00845DE6 /* AppLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				FE008C3025C6EC0A00845DE6 /* appLauncher.swift */,
+			);
+			path = AppLaunch;
+			sourceTree = "<group>";
+		};
+		FE008C6425C7350F00845DE6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE008C6525C7365100845DE6 /* AESEncrypter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FEE434E725C59C5700B15AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +139,7 @@
 		FEE434F325C59C5700B15AA9 /* ViperModule */ = {
 			isa = PBXGroup;
 			children = (
+				FE008C2F25C6EB2B00845DE6 /* AppLaunch */,
 				FEE4351425C5AC3D00B15AA9 /* LogIn */,
 				FEE434F425C59C5700B15AA9 /* ViperModule.h */,
 				FEE434F525C59C5700B15AA9 /* Info.plist */,
@@ -136,6 +159,7 @@
 		FEE4351425C5AC3D00B15AA9 /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				FE008C6425C7350F00845DE6 /* Utils */,
 				FEE4351E25C5AD2000B15AA9 /* View */,
 				FEE4351D25C5AD1600B15AA9 /* Presenter */,
 				FEE4351C25C5AD0600B15AA9 /* Interactor */,
@@ -174,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				FEE4352B25C5C5BA00B15AA9 /* LoginInteractor.swift */,
+				FE008C5825C7268600845DE6 /* CoreDataManager.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -374,9 +399,12 @@
 			files = (
 				FEE4352C25C5C5BA00B15AA9 /* LoginInteractor.swift in Sources */,
 				FEE4352825C5C56E00B15AA9 /* LoginPresenter.swift in Sources */,
+				FE008C6625C7365100845DE6 /* AESEncrypter.swift in Sources */,
 				FEE4353B25C5EF2200B15AA9 /* LoginRouter.swift in Sources */,
+				FE008C3125C6EC0A00845DE6 /* appLauncher.swift in Sources */,
 				FEE4352325C5B07800B15AA9 /* LoginViewController.swift in Sources */,
 				FEE4353025C5CA1400B15AA9 /* User.swift in Sources */,
+				FE008C5925C7268600845DE6 /* CoreDataManager.swift in Sources */,
 				FEE4351725C5ACAD00B15AA9 /* LoginProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

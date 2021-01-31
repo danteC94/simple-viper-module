@@ -5,9 +5,10 @@
 //  Created by dante on 30/01/2021.
 //
 
+import CoreData
 import Foundation
 
-struct User {
-    let email: String
-    let password: String
+class User: NSManagedObject {
+    var email: String?
+    var password: Data?
 }

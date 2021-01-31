@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ViperModule"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "Viper module let users see diferent economy indices."
 
   # This description is used to generate tags and improve search results.
@@ -133,6 +133,7 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency "Alamofire"
+  spec.dependency "CryptoSwift"
   spec.swift_version = "5.0"
 
 end

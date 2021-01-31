@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LoginViewToPresenterProtocol {
     func checkCredentials(email: String, pass: String)
@@ -16,19 +17,20 @@ protocol PresenterToLoginViewProtocol {
 }
 
 protocol InteractorToPresenterProtocol {
-    func userFetchSuccess()
+    func userFetchSuccess(email: String)
     func userFetchFailure()
 }
 
 protocol PresenterToInteractorProtocol {
     func fetchUser(email: String, pass: String)
+    func setUpDataBase()
 }
 
 protocol PresenterToRouterProtocol {
     func createModule() -> LoginViewController
-    func showEconomicIndicesView()
+    func showEconomicIndicesView(navVC: UINavigationController)
 }
 
 protocol RouterToPresenterProtocol {
-
+    func setUpDataBase()
 }

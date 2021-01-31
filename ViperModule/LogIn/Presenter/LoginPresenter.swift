@@ -20,10 +20,16 @@ extension LoginPresenter: LoginViewToPresenterProtocol {
 }
 
 extension LoginPresenter: InteractorToPresenterProtocol {
-    func userFetchSuccess() {
-        
+    func userFetchSuccess(email: String) {
+        print("Success")
     }
     func userFetchFailure() {
         self.loginView?.showErrorMessage()
+    }
+}
+
+extension LoginPresenter: RouterToPresenterProtocol {
+    func setUpDataBase() {
+        self.interactor?.setUpDataBase()
     }
 }
