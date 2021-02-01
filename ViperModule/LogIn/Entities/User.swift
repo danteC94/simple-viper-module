@@ -8,7 +8,7 @@
 import CoreData
 import Foundation
 
-class UserMO: NSManagedObject {
-    var email: String?
-    var password: Data?
+struct UserMO {
+    let email: String
+    let password: Data
 }
