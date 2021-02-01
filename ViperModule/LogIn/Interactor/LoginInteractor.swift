@@ -29,7 +29,7 @@ extension Interactor: PresenterToInteractorProtocol {
 
     func setUpDataBase() {
         // If the database is not empty return
-        guard let users = self.dbManager.getUsers(), users.count != 0 else { return }
+        guard let users = self.dbManager.getUsers(), users.count == 0 else { return }
         for n in 1...3 {
             self.dbManager.saveUser(email: "juan\(n)@gmail.com", password: "juanPass\(n)")
         }
