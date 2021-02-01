@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ViperModule"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "Viper module let users see diferent economy indices."
 
   # This description is used to generate tags and improve search results.
@@ -105,7 +105,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.resource  = "icon.png"
-  spec.resources = "ViperModule/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+  spec.resources = "ViperModule/**/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 

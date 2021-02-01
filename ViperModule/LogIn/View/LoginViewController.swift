@@ -18,6 +18,11 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton! {
+        didSet {
+            signInButton.titleLabel?.text = "Sign in to continue"
+        }
+    }
     @IBOutlet weak var errorMessage: UILabel! {
         didSet {
             errorMessage.alpha = 0

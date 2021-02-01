@@ -10,7 +10,7 @@ import UIKit
 class LoginRouter: PresenterToRouterProtocol {
     var presenter: RouterToPresenterProtocol?
     func createModule() -> LoginViewController {
-        let loginView = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let loginView = LoginViewController(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
         let presenter = LoginPresenter()
         let interactor = Interactor()
 

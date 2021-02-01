@@ -12,6 +12,8 @@
 		FE008C3125C6EC0A00845DE6 /* appLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C3025C6EC0A00845DE6 /* appLauncher.swift */; };
 		FE008C5925C7268600845DE6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C5825C7268600845DE6 /* CoreDataManager.swift */; };
 		FE008C6625C7365100845DE6 /* AESEncrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C6525C7365100845DE6 /* AESEncrypter.swift */; };
+		FE7B5DB625C787F900DE4AE9 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5DB525C787F900DE4AE9 /* DataBase.swift */; };
+		FE7B5DBD25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5DBB25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodeld */; };
 		FEE434FB25C59C5800B15AA9 /* ViperModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE434F125C59C5700B15AA9 /* ViperModule.framework */; };
 		FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE434FF25C59C5800B15AA9 /* ViperModuleTests.swift */; };
 		FEE4350225C59C5800B15AA9 /* ViperModule.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE434F425C59C5700B15AA9 /* ViperModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +46,8 @@
 		FE008C3025C6EC0A00845DE6 /* appLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appLauncher.swift; sourceTree = "<group>"; };
 		FE008C5825C7268600845DE6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FE008C6525C7365100845DE6 /* AESEncrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESEncrypter.swift; sourceTree = "<group>"; };
+		FE7B5DB525C787F900DE4AE9 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		FE7B5DBC25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ViperModuleDataModel.xcdatamodel; sourceTree = "<group>"; };
 		FEE434F125C59C5700B15AA9 /* ViperModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViperModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE434F425C59C5700B15AA9 /* ViperModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViperModule.h; sourceTree = "<group>"; };
 		FEE434F525C59C5700B15AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +120,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		FE7B5DB425C787EA00DE4AE9 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				FE7B5DB525C787F900DE4AE9 /* DataBase.swift */,
+				FE7B5DBB25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodeld */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
 		FEE434E725C59C5700B15AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +152,7 @@
 		FEE434F325C59C5700B15AA9 /* ViperModule */ = {
 			isa = PBXGroup;
 			children = (
+				FE7B5DB425C787EA00DE4AE9 /* DataBase */,
 				FE008C2F25C6EB2B00845DE6 /* AppLaunch */,
 				FEE4351425C5AC3D00B15AA9 /* LogIn */,
 				FEE434F425C59C5700B15AA9 /* ViperModule.h */,
@@ -397,6 +411,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7B5DBD25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodeld in Sources */,
+				FE7B5DB625C787F900DE4AE9 /* DataBase.swift in Sources */,
 				FEE4352C25C5C5BA00B15AA9 /* LoginInteractor.swift in Sources */,
 				FEE4352825C5C56E00B15AA9 /* LoginPresenter.swift in Sources */,
 				FE008C6625C7365100845DE6 /* AESEncrypter.swift in Sources */,
@@ -674,6 +690,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE7B5DBB25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE7B5DBC25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodel */,
+			);
+			currentVersion = FE7B5DBC25C7889800DE4AE9 /* ViperModuleDataModel.xcdatamodel */;
+			path = ViperModuleDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FEE434E825C59C5700B15AA9 /* Project object */;
 }

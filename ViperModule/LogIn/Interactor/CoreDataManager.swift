@@ -10,8 +10,8 @@ import Foundation
 
 protocol DataBaseManager {
     func saveUser(email: String, password: String)
-    func getUser(email: String, password: String) throws -> User?
-    func getUsers() -> [User]?
+    func getUser(email: String, password: String) throws -> UserMO?
+    func getUsers() -> [UserMO]?
 }
 
 class CoreDataManager {
@@ -45,14 +45,23 @@ class CoreDataManager {
 
 extension CoreDataManager: DataBaseManager {
     func saveUser(email: String, password: String) {
-        let entityValues: [String: Any] = ["email": email, "password": password]
-        let entityName = "User"
-        self.saveObject(entityName: entityName, entityValues: entityValues)
+        let aesEncrypter = AESEncrypter()
+        let aesParameters = aesEncrypter.getAESParameters(from: aesEncrypter.secretKey)
+        do {
+            let encryptedPassword = try aesEncrypter.aesEncrypt(pass: password,
+                                                                key: aesParameters.0,
+                                                                iv: aesParameters.1)
+            let entityValues: [String: Any] = ["email": email, "password": encryptedPassword]
+            let entityName = "User"
+            self.saveObject(entityName: entityName, entityValues: entityValues)
+        } catch let error as NSError {
+            print("Could not decrypt user password for. \(email), \(error.userInfo)")
+        }
     }
 
-    func getUser(email: String, password: String) throws -> User? {
+    func getUser(email: String, password: String) throws -> UserMO? {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
-        let users = self.fetchObjectsFromDB(fetchRequest: fetchRequest) as? [User]
+        let users = self.fetchObjectsFromDB(fetchRequest: fetchRequest) as? [UserMO]
         guard let user = users?.filter({ $0.email == email}).first else { return nil }
         let aesEncrypter = AESEncrypter()
         let aesParameters = aesEncrypter.getAESParameters(from: aesEncrypter.secretKey)
@@ -69,9 +78,9 @@ extension CoreDataManager: DataBaseManager {
         }
     }
 
-    func getUsers() -> [User]? {
+    func getUsers() -> [UserMO]? {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
-        return self.fetchObjectsFromDB(fetchRequest: fetchRequest) as? [User]
+        return self.fetchObjectsFromDB(fetchRequest: fetchRequest) as? [UserMO]
     }
 }
 

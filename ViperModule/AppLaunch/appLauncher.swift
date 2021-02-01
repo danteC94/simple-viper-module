@@ -15,12 +15,18 @@ public class ViperModule {
 
     public init(context: NSManagedObjectContext, navigationController: UINavigationController) {
         self.navigationController = navigationController
-        ViperModule.context = context
+        self.setUpContextDB()
         self.startApp()
     }
 
     func startApp() {
         let loginView = LoginRouter().createModule()
         self.navigationController.pushViewController(loginView, animated: true)
+    }
+
+    func setUpContextDB() {
+        let db = DataBase()
+        let context = db.persistentContainer.viewContext
+        ViperModule.context = context
     }
 }

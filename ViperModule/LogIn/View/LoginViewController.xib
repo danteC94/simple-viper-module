@@ -13,6 +13,7 @@
                 <outlet property="emailTextField" destination="Odi-Fz-O7y" id="IpE-fe-upb"/>
                 <outlet property="errorMessage" destination="Uti-FJ-1DA" id="34n-hZ-1PO"/>
                 <outlet property="passwordTextField" destination="iqw-qD-eDe" id="jZT-sY-JfV"/>
+                <outlet property="signInButton" destination="GUC-ec-zuh" id="ZfA-gu-kha"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
