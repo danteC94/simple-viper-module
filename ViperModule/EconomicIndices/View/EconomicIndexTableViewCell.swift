@@ -25,16 +25,26 @@ class EconomicIndexTableViewCell: UITableViewCell {
     @IBOutlet weak var nameTitle: UILabel! {
         didSet {
             nameTitle.text = "Nombre"
+            nameTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var name: UILabel! {
+        didSet {
+            name.numberOfLines = 0
+        }
+    }
 
     @IBOutlet weak var valueTitle: UILabel! {
         didSet {
             valueTitle.text = "Valor"
+            valueTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
-    @IBOutlet weak var value: UILabel!
+    @IBOutlet weak var value: UILabel! {
+        didSet {
+            value.numberOfLines = 0
+        }
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

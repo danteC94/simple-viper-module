@@ -27,34 +27,58 @@ class EconomicIndexDetailViewController: UIViewController {
 
     @IBOutlet weak var nameTitle: UILabel! {
         didSet {
-            nameTitle.text = "Name"
+            nameTitle.text = "Nombre"
+            nameTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
-    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var name: UILabel! {
+        didSet {
+            name.numberOfLines = 0
+        }
+    }
     @IBOutlet weak var codeTitle: UILabel! {
         didSet {
             codeTitle.text = "Codigo"
+            codeTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
-    @IBOutlet weak var code: UILabel!
+    @IBOutlet weak var code: UILabel! {
+        didSet {
+            code.numberOfLines = 0
+        }
+    }
     @IBOutlet weak var measurementUnitTitle: UILabel! {
         didSet {
             measurementUnitTitle.text = "Unidad de medida"
+            measurementUnitTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
-    @IBOutlet weak var measurementUnit: UILabel!
+    @IBOutlet weak var measurementUnit: UILabel! {
+        didSet {
+            measurementUnit.numberOfLines = 0
+        }
+    }
     @IBOutlet weak var dateTitle: UILabel! {
         didSet {
             dateTitle.text = "fecha"
+            dateTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
-    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var date: UILabel! {
+        didSet {
+            date.numberOfLines = 0
+        }
+    }
     @IBOutlet weak var valueTitle: UILabel! {
         didSet {
             valueTitle.text = "valor"
+            valueTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
-    @IBOutlet weak var value: UILabel!
-
+    @IBOutlet weak var value: UILabel! {
+        didSet {
+            value.numberOfLines = 0
+        }
+    }
 }
 
