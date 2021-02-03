@@ -8,9 +8,9 @@
 import Foundation
 
 class EconomicIndicesListPresenter {
-    var eilView: EILPresenterToEILViewProtocol?
-    var eilInteractor: EILPresenterToEILInteractorProtocol?
-    var eilRouter: EILPresenterToEILRouterProtocol?
+    weak var eilView: EILPresenterToEILViewProtocol?
+    weak var eilInteractor: EILPresenterToEILInteractorProtocol?
+    weak var eilRouter: EILPresenterToEILRouterProtocol?
 
     func createEconomicIndicesDTO(from economicIndexDesc: EconomicIndexEntity) -> EconomicIndexDTO {
         let economicIndexDTO: EconomicIndexDTO = EconomicIndexDTO(codigo: economicIndexDesc.codigo,
@@ -23,6 +23,10 @@ class EconomicIndicesListPresenter {
 }
 
 extension EconomicIndicesListPresenter: EILViewToEILPresenterProtocol {
+    func logOut() {
+        self.eilRouter?.logOut()
+    }
+
     func getEconomicIndices() {
         self.eilInteractor?.requestEconomicIndices()
     }

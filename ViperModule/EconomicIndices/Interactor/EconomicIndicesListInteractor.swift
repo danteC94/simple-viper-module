@@ -8,7 +8,7 @@
 import Foundation
 
 class EconomicIndicesListInteractor {
-    var presenter: EILInteractorToEILPresenterProtocol?
+    weak var presenter: EILInteractorToEILPresenterProtocol?
     var networkManager: NetworkManager = AlamofireNetworkManager()
 }
 

@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginRouter {
-    var presenter: LoginRouterToLoginPresenterProtocol?
+    weak var presenter: LoginRouterToLoginPresenterProtocol?
     var presentingViewController: UINavigationController?
 
     func createModule(navigationController: UINavigationController) -> LoginViewController {

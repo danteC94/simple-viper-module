@@ -27,7 +27,7 @@ class EconomicIndexDetailViewController: UIViewController {
 
     @IBOutlet weak var nameTitle: UILabel! {
         didSet {
-            nameTitle.text = "Nombre"
+            nameTitle.text = "Nombre:"
             nameTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
@@ -38,7 +38,7 @@ class EconomicIndexDetailViewController: UIViewController {
     }
     @IBOutlet weak var codeTitle: UILabel! {
         didSet {
-            codeTitle.text = "Codigo"
+            codeTitle.text = "Codigo:"
             codeTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
@@ -49,7 +49,7 @@ class EconomicIndexDetailViewController: UIViewController {
     }
     @IBOutlet weak var measurementUnitTitle: UILabel! {
         didSet {
-            measurementUnitTitle.text = "Unidad de medida"
+            measurementUnitTitle.text = "Unidad de medida:"
             measurementUnitTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
@@ -60,7 +60,7 @@ class EconomicIndexDetailViewController: UIViewController {
     }
     @IBOutlet weak var dateTitle: UILabel! {
         didSet {
-            dateTitle.text = "fecha"
+            dateTitle.text = "fecha:"
             dateTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
@@ -71,7 +71,7 @@ class EconomicIndexDetailViewController: UIViewController {
     }
     @IBOutlet weak var valueTitle: UILabel! {
         didSet {
-            valueTitle.text = "valor"
+            valueTitle.text = "valor:"
             valueTitle.font = .boldSystemFont(ofSize: 20)
         }
     }

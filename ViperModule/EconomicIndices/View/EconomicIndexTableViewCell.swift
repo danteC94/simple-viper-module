@@ -24,7 +24,7 @@ class EconomicIndexTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameTitle: UILabel! {
         didSet {
-            nameTitle.text = "Nombre"
+            nameTitle.text = "Nombre:"
             nameTitle.font = .boldSystemFont(ofSize: 20)
         }
     }
@@ -36,7 +36,7 @@ class EconomicIndexTableViewCell: UITableViewCell {
 
     @IBOutlet weak var valueTitle: UILabel! {
         didSet {
-            valueTitle.text = "Valor"
+            valueTitle.text = "Valor:"
             valueTitle.font = .boldSystemFont(ofSize: 20)
         }
     }

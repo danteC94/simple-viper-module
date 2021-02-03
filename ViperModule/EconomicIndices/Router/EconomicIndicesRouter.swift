@@ -8,7 +8,7 @@
 import UIKit
 
 class EconomicIndicesRouter {
-    var presenter: EILRouterToEILPresenterProtocol?
+    weak var presenter: EILRouterToEILPresenterProtocol?
     var presentingViewController: UINavigationController?
 
     func createModule(navigationController: UINavigationController, userEmail: String) -> EconomicInddicesListViewController {
@@ -31,6 +31,10 @@ class EconomicIndicesRouter {
 }
 
 extension EconomicIndicesRouter: EILPresenterToEILRouterProtocol {
+    func logOut() {
+        self.presentingViewController?.popViewController(animated: true)
+    }
+    
     func showEconomicIndexDetails(economicIndex: EconomicIndexDTO) {
         guard let presentingViewController = self.presentingViewController else { return }
 

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EconomicInddicesListViewController" customModule="ViperModule" customModuleProvider="target">
             <connections>
+                <outlet property="signOut" destination="UgK-Q1-wfb" id="vcp-Hc-JdB"/>
                 <outlet property="tableView" destination="6CJ-Tt-hYT" id="cbO-7h-7MV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,8 +20,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Huy-NX-kys">
+                    <rect key="frame" x="0.0" y="734" width="414" height="128"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgK-Q1-wfb">
+                            <rect key="frame" x="32" y="49" width="350" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="signOutTapped:" destination="-1" eventType="touchUpInside" id="hh6-am-RG8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="UgK-Q1-wfb" firstAttribute="leading" secondItem="Huy-NX-kys" secondAttribute="leading" constant="32" id="42m-1f-7xL"/>
+                        <constraint firstItem="UgK-Q1-wfb" firstAttribute="centerY" secondItem="Huy-NX-kys" secondAttribute="centerY" id="4JC-ER-xdT"/>
+                        <constraint firstAttribute="height" constant="128" id="gfe-r3-Lpt"/>
+                        <constraint firstAttribute="trailing" secondItem="UgK-Q1-wfb" secondAttribute="trailing" constant="32" id="o7O-X1-tbD"/>
+                    </constraints>
+                </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6CJ-Tt-hYT">
-                    <rect key="frame" x="16" y="44" width="382" height="852"/>
+                    <rect key="frame" x="16" y="44" width="382" height="690"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
@@ -29,8 +49,11 @@
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6CJ-Tt-hYT" secondAttribute="trailing" constant="16" id="C6c-yl-VHe"/>
                 <constraint firstItem="6CJ-Tt-hYT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FYT-xf-qov"/>
-                <constraint firstAttribute="bottom" secondItem="6CJ-Tt-hYT" secondAttribute="bottom" id="QTW-Yj-3Tu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Huy-NX-kys" secondAttribute="trailing" id="Jez-5y-b7U"/>
+                <constraint firstItem="Huy-NX-kys" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mr0-AX-EXh"/>
+                <constraint firstItem="6CJ-Tt-hYT" firstAttribute="bottom" secondItem="Huy-NX-kys" secondAttribute="top" id="opc-B4-2VR"/>
                 <constraint firstItem="6CJ-Tt-hYT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yXh-fo-lRA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Huy-NX-kys" secondAttribute="bottom" id="zt4-bB-oUI"/>
             </constraints>
             <point key="canvasLocation" x="139" y="102"/>
         </view>

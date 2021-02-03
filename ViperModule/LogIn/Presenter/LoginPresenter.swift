@@ -8,9 +8,9 @@
 import Foundation
 
 class LoginPresenter {
-    var loginView: LoginPresenterToLoginViewProtocol?
-    var interactor: LoginPresenterToLoginInteractorProtocol?
-    var router: LoginPresenterToLoginRouterProtocol?
+    weak var loginView: LoginPresenterToLoginViewProtocol?
+    weak var interactor: LoginPresenterToLoginInteractorProtocol?
+    weak var router: LoginPresenterToLoginRouterProtocol?
 }
 
 extension LoginPresenter: LoginViewToPresenterProtocol {

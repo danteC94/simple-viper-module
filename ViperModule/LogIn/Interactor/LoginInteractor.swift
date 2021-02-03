@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 
 class Interactor {
-    var presenter: LoginInteractorToLoginPresenterProtocol?
+    weak var presenter: LoginInteractorToLoginPresenterProtocol?
     var dbManager: DataBaseManager = CoreDataManager()
 }
 

@@ -10,26 +10,27 @@ import Foundation
 protocol EILViewToEILPresenterProtocol {
     func getEconomicIndices()
     func showEconomicIndexDetails(economicIndex: EconomicIndexDTO)
+    func logOut()
 }
 
-protocol EILPresenterToEILViewProtocol {
+protocol EILPresenterToEILViewProtocol: class {
     func showEconomicIndices(economicIndices: [EconomicIndexDTO])
 }
 
-protocol EILInteractorToEILPresenterProtocol {
+protocol EILInteractorToEILPresenterProtocol: class {
     func economicIndicesRequestSuccess(economicIndices: EconomicIndicesEntity)
     func economicIndicesRequestFail()
 }
 
-protocol EILPresenterToEILInteractorProtocol {
+protocol EILPresenterToEILInteractorProtocol: class {
     func requestEconomicIndices()
 }
 
-protocol EILPresenterToEILRouterProtocol {
+protocol EILPresenterToEILRouterProtocol: class {
     func showEconomicIndexDetails(economicIndex: EconomicIndexDTO)
-//    func pushEconomicIndicesModule(navVC: UINavigationController)
+    func logOut()
 }
 
-protocol EILRouterToEILPresenterProtocol {
+protocol EILRouterToEILPresenterProtocol: class {
     
 }

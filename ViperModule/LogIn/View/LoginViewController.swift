@@ -13,13 +13,18 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton! {
         didSet {
+            signInButton.backgroundColor = UIColor.init(red: 0,
+                                                   green: 170/255,
+                                                   blue: 70/255,
+                                                   alpha: 1)
+            signInButton.titleLabel?.tintColor = .white
+            signInButton.layer.cornerRadius = 15
             signInButton.setTitle("Iniciar sesion", for: .normal)
         }
     }

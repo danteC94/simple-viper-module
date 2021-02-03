@@ -12,25 +12,25 @@ protocol LoginViewToPresenterProtocol {
     func checkCredentials(email: String, pass: String)
 }
 
-protocol LoginPresenterToLoginViewProtocol {
+protocol LoginPresenterToLoginViewProtocol: class {
     func showErrorMessage()
     func getNavigationController() -> UINavigationController?
 }
 
-protocol LoginInteractorToLoginPresenterProtocol {
+protocol LoginInteractorToLoginPresenterProtocol: class {
     func userFetchSuccess(email: String)
     func userFetchFailure()
 }
 
-protocol LoginPresenterToLoginInteractorProtocol {
+protocol LoginPresenterToLoginInteractorProtocol: class {
     func fetchUser(email: String, pass: String)
     func setUpDataBase()
 }
 
-protocol LoginPresenterToLoginRouterProtocol {
+protocol LoginPresenterToLoginRouterProtocol: class {
     func pushEconomicIndicesModule(email: String)
 }
 
-protocol LoginRouterToLoginPresenterProtocol {
+protocol LoginRouterToLoginPresenterProtocol: class {
     func setUpDataBase()
 }
