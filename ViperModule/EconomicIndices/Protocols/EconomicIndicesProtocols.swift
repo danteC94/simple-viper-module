@@ -22,11 +22,11 @@ protocol EILInteractorToEILPresenterProtocol: class {
     func economicIndicesRequestFail()
 }
 
-protocol EILPresenterToEILInteractorProtocol: class {
+protocol EILPresenterToEILInteractorProtocol {
     func requestEconomicIndices()
 }
 
-protocol EILPresenterToEILRouterProtocol: class {
+protocol EILPresenterToEILRouterProtocol {
     func showEconomicIndexDetails(economicIndex: EconomicIndexDTO)
     func logOut()
 }

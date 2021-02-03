@@ -9,8 +9,8 @@ import Foundation
 
 class EconomicIndicesListPresenter {
     weak var eilView: EILPresenterToEILViewProtocol?
-    weak var eilInteractor: EILPresenterToEILInteractorProtocol?
-    weak var eilRouter: EILPresenterToEILRouterProtocol?
+    var eilInteractor: EILPresenterToEILInteractorProtocol?
+    var eilRouter: EILPresenterToEILRouterProtocol?
 
     func createEconomicIndicesDTO(from economicIndexDesc: EconomicIndexEntity) -> EconomicIndexDTO {
         let economicIndexDTO: EconomicIndexDTO = EconomicIndexDTO(codigo: economicIndexDesc.codigo,

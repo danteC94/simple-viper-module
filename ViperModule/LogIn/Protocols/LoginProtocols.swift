@@ -22,12 +22,12 @@ protocol LoginInteractorToLoginPresenterProtocol: class {
     func userFetchFailure()
 }
 
-protocol LoginPresenterToLoginInteractorProtocol: class {
+protocol LoginPresenterToLoginInteractorProtocol {
     func fetchUser(email: String, pass: String)
     func setUpDataBase()
 }
 
-protocol LoginPresenterToLoginRouterProtocol: class {
+protocol LoginPresenterToLoginRouterProtocol {
     func pushEconomicIndicesModule(email: String)
 }
 

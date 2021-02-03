@@ -55,7 +55,7 @@ class EconomicInddicesListViewController: UIViewController {
         }
     }
     @IBAction func signOutTapped(_ sender: Any) {
-//        presenter
+        presenter?.logOut()
     }
 }
 
