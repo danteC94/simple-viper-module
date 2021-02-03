@@ -7,9 +7,13 @@
 
 import UIKit
 
-class LoginRouter: PresenterToRouterProtocol {
+class LoginRouter {
     var presenter: RouterToPresenterProtocol?
-    func createModule() -> LoginViewController {
+    var presentingViewController: UINavigationController?
+
+    func createModule(navigationController: UINavigationController) -> LoginViewController {
+        self.presentingViewController = navigationController
+
         let loginView = LoginViewController(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
         let presenter = LoginPresenter()
         let interactor = Interactor()
@@ -25,9 +29,14 @@ class LoginRouter: PresenterToRouterProtocol {
 
         return loginView
     }
+}
 
-    func showEconomicIndicesView(navVC: UINavigationController) {
-        // let economicIndicesModule = EconomicIndices.createmodule
-        // navVC.pushViewController(economicIndicesModule)
+extension LoginRouter: PresenterToRouterProtocol {
+    func pushEconomicIndicesModule(email: String) {
+        guard let presentingViewController = self.presentingViewController else { return }
+
+        let view = EconomicIndicesRouter().createModule(navigationController: presentingViewController, userEmail: email)
+        presentingViewController.pushViewController(view, animated: true)
+        
     }
 }

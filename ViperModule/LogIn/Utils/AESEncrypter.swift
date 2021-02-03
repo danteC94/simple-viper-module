@@ -8,7 +8,7 @@
 import Foundation
 import CryptoSwift
 
-let sharedKey = AESEncrypter.generateRandomKey()
+let sharedKey = "WpaPGv7jzcHN3DbwLiMXFL2ysXvWf2eW"
 
 class AESEncrypter {
     let secretKey: String
@@ -32,15 +32,10 @@ class AESEncrypter {
         return Data(encryptedBytes)
     }
 
-    func aesDecrypt(encryptedData: Data, key: String, iv: String) throws -> String {
+    func aesDecrypt(encryptedData: Data, key: String, iv: String) throws -> String? {
         let aes = try AES(key: key, iv: iv, padding: .pkcs7)
         let decryptedBytes = try aes.decrypt(encryptedData.bytes)
 
-        return String(bytes: decryptedBytes, encoding: .utf8)!
-    }
-
-    static func generateRandomKey() -> String {
-        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-        return String((0..<32).map{ _ in letters.randomElement() ?? "X" })
+        return String(bytes: decryptedBytes, encoding: .utf8)
     }
 }

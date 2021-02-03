@@ -20,7 +20,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton! {
         didSet {
-            signInButton.titleLabel?.text = "Sign in to continue"
+            signInButton.setTitle("Iniciar sesion", for: .normal)
         }
     }
     @IBOutlet weak var errorMessage: UILabel! {
@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
         }
     }
 
-
     @IBAction func SignIn(_ sender: Any) {
         guard let email = self.emailTextField.text, let password = self.passwordTextField.text else { return }
         self.presenter?.checkCredentials(email: email, pass: password)
@@ -37,9 +36,15 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: PresenterToLoginViewProtocol {
+    func getNavigationController() -> UINavigationController? {
+        return self.navigationController
+    }
+
     func showErrorMessage() {
         UIView.animate(withDuration: 0.5,
                        animations: { self.errorMessage.alpha = 1 },
-                       completion: { _ in self.errorMessage.alpha = 0 })
+                       completion: { _ in UIView.animate(withDuration: 0.5,
+                                                         animations: { self.errorMessage.alpha = 0 })}
+        )
     }
 }

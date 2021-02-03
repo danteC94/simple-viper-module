@@ -12,6 +12,19 @@
 		FE008C3125C6EC0A00845DE6 /* appLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C3025C6EC0A00845DE6 /* appLauncher.swift */; };
 		FE008C5925C7268600845DE6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C5825C7268600845DE6 /* CoreDataManager.swift */; };
 		FE008C6625C7365100845DE6 /* AESEncrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C6525C7365100845DE6 /* AESEncrypter.swift */; };
+		FE7B5E5825C7B73700DE4AE9 /* EconomicInddicesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E5625C7B73700DE4AE9 /* EconomicInddicesListViewController.swift */; };
+		FE7B5E5925C7B73700DE4AE9 /* EconomicInddicesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7B5E5725C7B73700DE4AE9 /* EconomicInddicesListViewController.xib */; };
+		FE7B5E5D25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E5C25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift */; };
+		FE7B5E6125C7BE0B00DE4AE9 /* EconomicIndicesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E6025C7BE0B00DE4AE9 /* EconomicIndicesListPresenter.swift */; };
+		FE7B5E6525C7BE9E00DE4AE9 /* EconomicIndicesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E6425C7BE9E00DE4AE9 /* EconomicIndicesListInteractor.swift */; };
+		FE7B5E6925C7C10900DE4AE9 /* EconomicIndicesListEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E6825C7C10900DE4AE9 /* EconomicIndicesListEntities.swift */; };
+		FE7B5E6D25C7C26400DE4AE9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E6C25C7C26400DE4AE9 /* NetworkManager.swift */; };
+		FE8A639D25CA06B70085D222 /* EconomicIndicesDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A639C25CA06B70085D222 /* EconomicIndicesDTOs.swift */; };
+		FE8A63A225CA0BE70085D222 /* EconomicIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A63A025CA0BE70085D222 /* EconomicIndexTableViewCell.swift */; };
+		FE8A63A325CA0BE70085D222 /* EconomicIndexTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8A63A125CA0BE70085D222 /* EconomicIndexTableViewCell.xib */; };
+		FE8A63A825CA146C0085D222 /* EconomicIndicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A63A725CA146C0085D222 /* EconomicIndicesRouter.swift */; };
+		FE8A63B525CA230A0085D222 /* EconomicIndexDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A63B325CA230A0085D222 /* EconomicIndexDetailViewController.swift */; };
+		FE8A63B625CA230A0085D222 /* EconomicIndexDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8A63B425CA230A0085D222 /* EconomicIndexDetailViewController.xib */; };
 		FEE434FB25C59C5800B15AA9 /* ViperModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE434F125C59C5700B15AA9 /* ViperModule.framework */; };
 		FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE434FF25C59C5800B15AA9 /* ViperModuleTests.swift */; };
 		FEE4350225C59C5800B15AA9 /* ViperModule.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE434F425C59C5700B15AA9 /* ViperModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +57,19 @@
 		FE008C3025C6EC0A00845DE6 /* appLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appLauncher.swift; sourceTree = "<group>"; };
 		FE008C5825C7268600845DE6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FE008C6525C7365100845DE6 /* AESEncrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESEncrypter.swift; sourceTree = "<group>"; };
+		FE7B5E5625C7B73700DE4AE9 /* EconomicInddicesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicInddicesListViewController.swift; sourceTree = "<group>"; };
+		FE7B5E5725C7B73700DE4AE9 /* EconomicInddicesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EconomicInddicesListViewController.xib; sourceTree = "<group>"; };
+		FE7B5E5C25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesProtocols.swift; sourceTree = "<group>"; };
+		FE7B5E6025C7BE0B00DE4AE9 /* EconomicIndicesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesListPresenter.swift; sourceTree = "<group>"; };
+		FE7B5E6425C7BE9E00DE4AE9 /* EconomicIndicesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesListInteractor.swift; sourceTree = "<group>"; };
+		FE7B5E6825C7C10900DE4AE9 /* EconomicIndicesListEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesListEntities.swift; sourceTree = "<group>"; };
+		FE7B5E6C25C7C26400DE4AE9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FE8A639C25CA06B70085D222 /* EconomicIndicesDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesDTOs.swift; sourceTree = "<group>"; };
+		FE8A63A025CA0BE70085D222 /* EconomicIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndexTableViewCell.swift; sourceTree = "<group>"; };
+		FE8A63A125CA0BE70085D222 /* EconomicIndexTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EconomicIndexTableViewCell.xib; sourceTree = "<group>"; };
+		FE8A63A725CA146C0085D222 /* EconomicIndicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesRouter.swift; sourceTree = "<group>"; };
+		FE8A63B325CA230A0085D222 /* EconomicIndexDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndexDetailViewController.swift; sourceTree = "<group>"; };
+		FE8A63B425CA230A0085D222 /* EconomicIndexDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EconomicIndexDetailViewController.xib; sourceTree = "<group>"; };
 		FEE434F125C59C5700B15AA9 /* ViperModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViperModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE434F425C59C5700B15AA9 /* ViperModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViperModule.h; sourceTree = "<group>"; };
 		FEE434F525C59C5700B15AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +142,74 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		FE7B5E4E25C7ACC600DE4AE9 /* EconomicIndices */ = {
+			isa = PBXGroup;
+			children = (
+				FE8A63A625CA14390085D222 /* Router */,
+				FE7B5E5525C7B6A100DE4AE9 /* View */,
+				FE7B5E5425C7B69300DE4AE9 /* Presenter */,
+				FE7B5E5325C7B68800DE4AE9 /* Interactor */,
+				FE7B5E5225C7B67200DE4AE9 /* Entities */,
+				FE7B5E4F25C7ACE500DE4AE9 /* Protocols */,
+			);
+			path = EconomicIndices;
+			sourceTree = "<group>";
+		};
+		FE7B5E4F25C7ACE500DE4AE9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FE7B5E5C25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FE7B5E5225C7B67200DE4AE9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FE7B5E6825C7C10900DE4AE9 /* EconomicIndicesListEntities.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FE7B5E5325C7B68800DE4AE9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				FE7B5E6425C7BE9E00DE4AE9 /* EconomicIndicesListInteractor.swift */,
+				FE7B5E6C25C7C26400DE4AE9 /* NetworkManager.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		FE7B5E5425C7B69300DE4AE9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				FE7B5E6025C7BE0B00DE4AE9 /* EconomicIndicesListPresenter.swift */,
+				FE8A639C25CA06B70085D222 /* EconomicIndicesDTOs.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		FE7B5E5525C7B6A100DE4AE9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE7B5E5625C7B73700DE4AE9 /* EconomicInddicesListViewController.swift */,
+				FE7B5E5725C7B73700DE4AE9 /* EconomicInddicesListViewController.xib */,
+				FE8A63A025CA0BE70085D222 /* EconomicIndexTableViewCell.swift */,
+				FE8A63A125CA0BE70085D222 /* EconomicIndexTableViewCell.xib */,
+				FE8A63B325CA230A0085D222 /* EconomicIndexDetailViewController.swift */,
+				FE8A63B425CA230A0085D222 /* EconomicIndexDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE8A63A625CA14390085D222 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FE8A63A725CA146C0085D222 /* EconomicIndicesRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FEE434E725C59C5700B15AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +233,7 @@
 		FEE434F325C59C5700B15AA9 /* ViperModule */ = {
 			isa = PBXGroup;
 			children = (
+				FE7B5E4E25C7ACC600DE4AE9 /* EconomicIndices */,
 				FE008C2F25C6EB2B00845DE6 /* AppLaunch */,
 				FEE4351425C5AC3D00B15AA9 /* LogIn */,
 				FEE434F425C59C5700B15AA9 /* ViperModule.h */,
@@ -315,7 +410,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7B5E5925C7B73700DE4AE9 /* EconomicInddicesListViewController.xib in Resources */,
+				FE8A63B625CA230A0085D222 /* EconomicIndexDetailViewController.xib in Resources */,
 				FEE4352425C5B07800B15AA9 /* LoginViewController.xib in Resources */,
+				FE8A63A325CA0BE70085D222 /* EconomicIndexTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,14 +496,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE4352C25C5C5BA00B15AA9 /* LoginInteractor.swift in Sources */,
+				FE7B5E6125C7BE0B00DE4AE9 /* EconomicIndicesListPresenter.swift in Sources */,
 				FEE4352825C5C56E00B15AA9 /* LoginPresenter.swift in Sources */,
 				FE008C6625C7365100845DE6 /* AESEncrypter.swift in Sources */,
 				FEE4353B25C5EF2200B15AA9 /* LoginRouter.swift in Sources */,
 				FE008C3125C6EC0A00845DE6 /* appLauncher.swift in Sources */,
 				FEE4352325C5B07800B15AA9 /* LoginViewController.swift in Sources */,
+				FE7B5E5825C7B73700DE4AE9 /* EconomicInddicesListViewController.swift in Sources */,
 				FEE4353025C5CA1400B15AA9 /* User.swift in Sources */,
 				FE008C5925C7268600845DE6 /* CoreDataManager.swift in Sources */,
+				FE8A639D25CA06B70085D222 /* EconomicIndicesDTOs.swift in Sources */,
+				FE8A63A825CA146C0085D222 /* EconomicIndicesRouter.swift in Sources */,
+				FE8A63A225CA0BE70085D222 /* EconomicIndexTableViewCell.swift in Sources */,
+				FE8A63B525CA230A0085D222 /* EconomicIndexDetailViewController.swift in Sources */,
+				FE7B5E5D25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift in Sources */,
+				FE7B5E6525C7BE9E00DE4AE9 /* EconomicIndicesListInteractor.swift in Sources */,
+				FE7B5E6D25C7C26400DE4AE9 /* NetworkManager.swift in Sources */,
 				FEE4351725C5ACAD00B15AA9 /* LoginProtocols.swift in Sources */,
+				FE7B5E6925C7C10900DE4AE9 /* EconomicIndicesListEntities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

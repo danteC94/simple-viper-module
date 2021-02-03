@@ -64,6 +64,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="RNh-pD-IaG"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
                             <state key="normal" title="Button"/>
                             <connections>
                                 <action selector="SignIn:" destination="-1" eventType="touchUpInside" id="hpm-iE-EvV"/>

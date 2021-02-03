@@ -14,6 +14,7 @@ protocol LoginViewToPresenterProtocol {
 
 protocol PresenterToLoginViewProtocol {
     func showErrorMessage()
+    func getNavigationController() -> UINavigationController?
 }
 
 protocol InteractorToPresenterProtocol {
@@ -27,8 +28,7 @@ protocol PresenterToInteractorProtocol {
 }
 
 protocol PresenterToRouterProtocol {
-    func createModule() -> LoginViewController
-    func showEconomicIndicesView(navVC: UINavigationController)
+    func pushEconomicIndicesModule(email: String)
 }
 
 protocol RouterToPresenterProtocol {

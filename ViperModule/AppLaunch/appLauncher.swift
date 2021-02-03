@@ -20,7 +20,7 @@ public class ViperModule {
     }
 
     func startApp() {
-        let loginView = LoginRouter().createModule()
+        let loginView = LoginRouter().createModule(navigationController: self.navigationController)
         self.navigationController.pushViewController(loginView, animated: true)
     }
 }
