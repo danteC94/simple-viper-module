@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginRouter {
-    var presenter: RouterToPresenterProtocol?
+    var presenter: LoginRouterToLoginPresenterProtocol?
     var presentingViewController: UINavigationController?
 
     func createModule(navigationController: UINavigationController) -> LoginViewController {
@@ -31,7 +31,7 @@ class LoginRouter {
     }
 }
 
-extension LoginRouter: PresenterToRouterProtocol {
+extension LoginRouter: LoginPresenterToLoginRouterProtocol {
     func pushEconomicIndicesModule(email: String) {
         guard let presentingViewController = self.presentingViewController else { return }
 

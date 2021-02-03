@@ -35,6 +35,8 @@ extension EconomicIndicesRouter: EILPresenterToEILRouterProtocol {
         guard let presentingViewController = self.presentingViewController else { return }
 
         let view = EconomicIndexDetailViewController(nibName: "EconomicIndexDetailViewController", bundle: Bundle(for: EconomicIndexDetailViewController.self))
+        _ = view.view
+        view.economicIndexDTOs = economicIndex
         presentingViewController.pushViewController(view, animated: true)
     }
 }

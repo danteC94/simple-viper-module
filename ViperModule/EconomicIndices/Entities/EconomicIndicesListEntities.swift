@@ -5,14 +5,25 @@
 //  Created by dante on 01/02/2021.
 //
 
-struct EconomicIndices: Decodable {
+struct EconomicIndicesEntity: Decodable {
     let version: String
     let autor: String
     let fecha: String
-    let economicIndexDesc: [EconomicIndex]
+    let uf: EconomicIndexEntity
+    let ivp: EconomicIndexEntity
+    let dolar: EconomicIndexEntity
+    let dolar_intercambio: EconomicIndexEntity
+    let euro: EconomicIndexEntity
+    let ipc: EconomicIndexEntity
+    let utm: EconomicIndexEntity
+    let imacec: EconomicIndexEntity
+    let tpm: EconomicIndexEntity
+    let libra_cobre: EconomicIndexEntity
+    let tasa_desempleo: EconomicIndexEntity
+    let bitcoin: EconomicIndexEntity
 }
 
-struct EconomicIndex: Decodable {
+struct EconomicIndexEntity: Decodable {
     let codigo: String
     let nombre: String
     let unidadMedida: String
@@ -22,5 +33,11 @@ struct EconomicIndex: Decodable {
     enum CodingKeys: String, CodingKey {
         case codigo, nombre, fecha, valor
         case unidadMedida = "unidad_medida"
+    }
+}
+
+extension EconomicIndicesEntity {
+    func getEconomicIndices() -> [EconomicIndexEntity] {
+        return [uf, ivp, dolar, dolar_intercambio, euro, ipc, utm, imacec, tpm, libra_cobre, tasa_desempleo, bitcoin]
     }
 }

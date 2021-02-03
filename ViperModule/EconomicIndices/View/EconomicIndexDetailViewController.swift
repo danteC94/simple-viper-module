@@ -33,25 +33,25 @@ class EconomicIndexDetailViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var codeTitle: UILabel! {
         didSet {
-            nameTitle.text = "Codigo"
+            codeTitle.text = "Codigo"
         }
     }
     @IBOutlet weak var code: UILabel!
     @IBOutlet weak var measurementUnitTitle: UILabel! {
         didSet {
-            nameTitle.text = "Unidad de medida"
+            measurementUnitTitle.text = "Unidad de medida"
         }
     }
     @IBOutlet weak var measurementUnit: UILabel!
     @IBOutlet weak var dateTitle: UILabel! {
         didSet {
-            nameTitle.text = "fecha"
+            dateTitle.text = "fecha"
         }
     }
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var valueTitle: UILabel! {
         didSet {
-            nameTitle.text = "valor"
+            valueTitle.text = "valor"
         }
     }
     @IBOutlet weak var value: UILabel!

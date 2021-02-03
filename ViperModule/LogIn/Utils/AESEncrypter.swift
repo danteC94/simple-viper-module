@@ -8,6 +8,7 @@
 import Foundation
 import CryptoSwift
 
+// TODO: store sharedKey on keychain
 let sharedKey = "WpaPGv7jzcHN3DbwLiMXFL2ysXvWf2eW"
 
 class AESEncrypter {

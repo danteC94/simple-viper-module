@@ -8,7 +8,7 @@
 import CoreData
 import Foundation
 
-struct UserMO {
+struct UserEntity {
     let email: String
     let password: Data
 }

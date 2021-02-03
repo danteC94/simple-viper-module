@@ -35,7 +35,7 @@ class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: PresenterToLoginViewProtocol {
+extension LoginViewController: LoginPresenterToLoginViewProtocol {
     func getNavigationController() -> UINavigationController? {
         return self.navigationController
     }

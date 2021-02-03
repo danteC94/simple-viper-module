@@ -18,7 +18,11 @@ class EconomicInddicesListViewController: UIViewController {
         self.title = self.email
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.register((UINib(nibName: "EconomicIndexTableViewCell", bundle: nil)), forCellReuseIdentifier: "EconomicIndexTableViewCell")
+        self.tableView.register(
+            (UINib(
+                nibName: "EconomicIndexTableViewCell",
+                bundle: Bundle(for: EconomicIndexTableViewCell.self))),
+            forCellReuseIdentifier: "EconomicIndexTableViewCell")
         self.presenter?.getEconomicIndices()
     }
 

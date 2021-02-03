@@ -12,7 +12,7 @@ class EconomicIndicesListPresenter {
     var eilInteractor: EILPresenterToEILInteractorProtocol?
     var eilRouter: EILPresenterToEILRouterProtocol?
 
-    func createEconomicIndicesDTO(from economicIndexDesc: EconomicIndex) -> EconomicIndexDTO {
+    func createEconomicIndicesDTO(from economicIndexDesc: EconomicIndexEntity) -> EconomicIndexDTO {
         let economicIndexDTO: EconomicIndexDTO = EconomicIndexDTO(codigo: economicIndexDesc.codigo,
                                                                   nombre: economicIndexDesc.nombre,
                                                                   unidadMedida: economicIndexDesc.unidadMedida,
@@ -32,16 +32,14 @@ extension EconomicIndicesListPresenter: EILViewToEILPresenterProtocol {
 }
 
 extension EconomicIndicesListPresenter: EILInteractorToEILPresenterProtocol {
-    func economicIndicesRequestSuccess(economicIndices: EconomicIndices) {
-        let economicIndexDTOs = economicIndices.economicIndexDesc.map{ economicIndex in
+    func economicIndicesRequestSuccess(economicIndices: EconomicIndicesEntity) {
+        let economicIndexDTOs = economicIndices.getEconomicIndices().map{ economicIndex in
             self.createEconomicIndicesDTO(from: economicIndex)
         }
         self.eilView?.showEconomicIndices(economicIndices: economicIndexDTOs)
     }
 
-    func economicIndicesRequestFail() {
-
-    }
+    func economicIndicesRequestFail() {}
 }
 
 extension EconomicIndicesListPresenter: EILRouterToEILPresenterProtocol {

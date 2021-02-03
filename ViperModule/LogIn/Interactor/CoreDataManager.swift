@@ -10,7 +10,7 @@ import Foundation
 
 protocol DataBaseManager {
     func saveUser(email: String, password: String)
-    func getUser(email: String, password: String) throws -> UserMO?
+    func getUser(email: String, password: String) throws -> UserEntity?
     func getUsers() -> [NSManagedObject]?
 }
 
@@ -59,7 +59,7 @@ extension CoreDataManager: DataBaseManager {
         }
     }
 
-    func getUser(email: String, password: String) throws -> UserMO? {
+    func getUser(email: String, password: String) throws -> UserEntity? {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
         let users = self.fetchObjectsFromDB(fetchRequest: fetchRequest)
         guard let user = users?.filter({ ($0.value(forKey: "email")) as? String == email}).first else { return nil }
@@ -71,7 +71,7 @@ extension CoreDataManager: DataBaseManager {
                                                             key: aesParameters.0,
                                                             iv: aesParameters.1)
             guard decryptedPass == password else { return nil }
-            return UserMO(email: email, password: encryptedpassword)
+            return UserEntity(email: email, password: encryptedpassword)
         } catch let error as NSError {
             print("Could not decrypt user password for. \(email), \(error.userInfo)")
             return nil

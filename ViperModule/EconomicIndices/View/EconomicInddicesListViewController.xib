@@ -20,15 +20,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6CJ-Tt-hYT">
-                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <rect key="frame" x="16" y="44" width="382" height="852"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6CJ-Tt-hYT" secondAttribute="trailing" id="C6c-yl-VHe"/>
-                <constraint firstItem="6CJ-Tt-hYT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FYT-xf-qov"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6CJ-Tt-hYT" secondAttribute="trailing" constant="16" id="C6c-yl-VHe"/>
+                <constraint firstItem="6CJ-Tt-hYT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FYT-xf-qov"/>
                 <constraint firstAttribute="bottom" secondItem="6CJ-Tt-hYT" secondAttribute="bottom" id="QTW-Yj-3Tu"/>
                 <constraint firstItem="6CJ-Tt-hYT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yXh-fo-lRA"/>
             </constraints>

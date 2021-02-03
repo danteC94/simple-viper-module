@@ -9,11 +9,11 @@ import CoreData
 import Foundation
 
 class Interactor {
-    var presenter: InteractorToPresenterProtocol?
+    var presenter: LoginInteractorToLoginPresenterProtocol?
     var dbManager: DataBaseManager = CoreDataManager()
 }
 
-extension Interactor: PresenterToInteractorProtocol {
+extension Interactor: LoginPresenterToLoginInteractorProtocol {
     func fetchUser(email: String, pass: String) {
         do {
             guard try self.dbManager.getUser(email: email, password: pass) != nil else {

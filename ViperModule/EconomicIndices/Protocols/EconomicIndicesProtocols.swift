@@ -17,7 +17,7 @@ protocol EILPresenterToEILViewProtocol {
 }
 
 protocol EILInteractorToEILPresenterProtocol {
-    func economicIndicesRequestSuccess(economicIndices: EconomicIndices)
+    func economicIndicesRequestSuccess(economicIndices: EconomicIndicesEntity)
     func economicIndicesRequestFail()
 }
 
