@@ -7,27 +7,19 @@
 
 import UIKit
 
-class LoginRouter {
+public class LoginRouter {
     weak var presenter: LoginRouterToLoginPresenterProtocol?
     var presentingViewController: UINavigationController?
 
-    func createModule(navigationController: UINavigationController) -> LoginViewController {
+    func createModule(navigationController: UINavigationController, moduleAssembler: LoginModuleAssemblerProtocol) -> UIViewController {
         self.presentingViewController = navigationController
-
-        let loginView = LoginViewController(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
-        let presenter = LoginPresenter()
-        let interactor = Interactor()
-
-        self.presenter = presenter
-        loginView.presenter = presenter
-        presenter.loginView = loginView
-        presenter.router = self
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-
-        self.presenter?.setUpDataBase()
+        let loginView = moduleAssembler.assembleModule(router: self)
 
         return loginView
+    }
+
+    func setUpDataBase() {
+        self.presenter?.setUpDataBase()
     }
 }
 

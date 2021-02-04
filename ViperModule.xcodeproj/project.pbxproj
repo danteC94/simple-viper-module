@@ -25,6 +25,11 @@
 		FE8A63A825CA146C0085D222 /* EconomicIndicesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A63A725CA146C0085D222 /* EconomicIndicesRouter.swift */; };
 		FE8A63B525CA230A0085D222 /* EconomicIndexDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A63B325CA230A0085D222 /* EconomicIndexDetailViewController.swift */; };
 		FE8A63B625CA230A0085D222 /* EconomicIndexDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE8A63B425CA230A0085D222 /* EconomicIndexDetailViewController.xib */; };
+		FEAD64D725CB72EA00DCB781 /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64D625CB72EA00DCB781 /* TestBase.swift */; };
+		FEAD64DE25CB75F800DCB781 /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64DD25CB75F800DCB781 /* RouterTests.swift */; };
+		FEAD64E425CB7E1F00DCB781 /* LoginModuleAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64E325CB7E1F00DCB781 /* LoginModuleAssembler.swift */; };
+		FEAD64E925CB8CE600DCB781 /* LoginModuleAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64E825CB8CE600DCB781 /* LoginModuleAssemblerTests.swift */; };
+		FEAD64F025CBA08600DCB781 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64EF25CBA08600DCB781 /* LoginPresenterTests.swift */; };
 		FEE434FB25C59C5800B15AA9 /* ViperModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE434F125C59C5700B15AA9 /* ViperModule.framework */; };
 		FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE434FF25C59C5800B15AA9 /* ViperModuleTests.swift */; };
 		FEE4350225C59C5800B15AA9 /* ViperModule.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE434F425C59C5700B15AA9 /* ViperModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -70,6 +75,11 @@
 		FE8A63A725CA146C0085D222 /* EconomicIndicesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesRouter.swift; sourceTree = "<group>"; };
 		FE8A63B325CA230A0085D222 /* EconomicIndexDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndexDetailViewController.swift; sourceTree = "<group>"; };
 		FE8A63B425CA230A0085D222 /* EconomicIndexDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EconomicIndexDetailViewController.xib; sourceTree = "<group>"; };
+		FEAD64D625CB72EA00DCB781 /* TestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
+		FEAD64DD25CB75F800DCB781 /* RouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
+		FEAD64E325CB7E1F00DCB781 /* LoginModuleAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleAssembler.swift; sourceTree = "<group>"; };
+		FEAD64E825CB8CE600DCB781 /* LoginModuleAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleAssemblerTests.swift; sourceTree = "<group>"; };
+		FEAD64EF25CBA08600DCB781 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		FEE434F125C59C5700B15AA9 /* ViperModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViperModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE434F425C59C5700B15AA9 /* ViperModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViperModule.h; sourceTree = "<group>"; };
 		FEE434F525C59C5700B15AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				FE008C6525C7365100845DE6 /* AESEncrypter.swift */,
+				FEAD64E325CB7E1F00DCB781 /* LoginModuleAssembler.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -210,6 +221,48 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		FEAD64D425CB729B00DCB781 /* LoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEAD64EE25CB931600DCB781 /* LoginPresenterTests */,
+				FEAD64E725CB8CC800DCB781 /* UtilsTests */,
+				FEAD64DC25CB75DD00DCB781 /* RouterTests */,
+			);
+			path = LoginTests;
+			sourceTree = "<group>";
+		};
+		FEAD64D525CB72CD00DCB781 /* TestProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				FEAD64D625CB72EA00DCB781 /* TestBase.swift */,
+			);
+			path = TestProtocols;
+			sourceTree = "<group>";
+		};
+		FEAD64DC25CB75DD00DCB781 /* RouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEAD64DD25CB75F800DCB781 /* RouterTests.swift */,
+			);
+			path = RouterTests;
+			sourceTree = "<group>";
+		};
+		FEAD64E725CB8CC800DCB781 /* UtilsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEAD64E825CB8CE600DCB781 /* LoginModuleAssemblerTests.swift */,
+			);
+			path = UtilsTests;
+			sourceTree = "<group>";
+		};
+		FEAD64EE25CB931600DCB781 /* LoginPresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				FEAD64EF25CBA08600DCB781 /* LoginPresenterTests.swift */,
+			);
+			path = LoginPresenterTests;
+			sourceTree = "<group>";
+		};
 		FEE434E725C59C5700B15AA9 = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +298,8 @@
 		FEE434FE25C59C5800B15AA9 /* ViperModuleTests */ = {
 			isa = PBXGroup;
 			children = (
+				FEAD64D525CB72CD00DCB781 /* TestProtocols */,
+				FEAD64D425CB729B00DCB781 /* LoginTests */,
 				FEE434FF25C59C5800B15AA9 /* ViperModuleTests.swift */,
 				FEE4350125C59C5800B15AA9 /* Info.plist */,
 			);
@@ -505,6 +560,7 @@
 				FE7B5E5825C7B73700DE4AE9 /* EconomicInddicesListViewController.swift in Sources */,
 				FEE4353025C5CA1400B15AA9 /* User.swift in Sources */,
 				FE008C5925C7268600845DE6 /* CoreDataManager.swift in Sources */,
+				FEAD64E425CB7E1F00DCB781 /* LoginModuleAssembler.swift in Sources */,
 				FE8A639D25CA06B70085D222 /* EconomicIndicesDTOs.swift in Sources */,
 				FE8A63A825CA146C0085D222 /* EconomicIndicesRouter.swift in Sources */,
 				FE8A63A225CA0BE70085D222 /* EconomicIndexTableViewCell.swift in Sources */,
@@ -521,7 +577,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEAD64D725CB72EA00DCB781 /* TestBase.swift in Sources */,
+				FEAD64DE25CB75F800DCB781 /* RouterTests.swift in Sources */,
+				FEAD64E925CB8CE600DCB781 /* LoginModuleAssemblerTests.swift in Sources */,
 				FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */,
+				FEAD64F025CBA08600DCB781 /* LoginPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

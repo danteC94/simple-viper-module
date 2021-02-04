@@ -21,7 +21,7 @@ extension LoginPresenter: LoginViewToPresenterProtocol {
 
 extension LoginPresenter: LoginInteractorToLoginPresenterProtocol {
     func userFetchSuccess(email: String) {
-        router?.pushEconomicIndicesModule(email: email)
+        self.router?.pushEconomicIndicesModule(email: email)
     }
     func userFetchFailure() {
         self.loginView?.showErrorMessage()

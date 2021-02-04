@@ -8,7 +8,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
     var presenter: LoginViewToPresenterProtocol?
 
     override func viewDidLoad() {
@@ -41,9 +40,6 @@ class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: LoginPresenterToLoginViewProtocol {
-    func getNavigationController() -> UINavigationController? {
-        return self.navigationController
-    }
 
     func showErrorMessage() {
         UIView.animate(withDuration: 0.5,

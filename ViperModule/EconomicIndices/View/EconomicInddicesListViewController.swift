@@ -26,6 +26,7 @@ class EconomicInddicesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = self.email
+        self.navigationItem.setHidesBackButton(true, animated: true)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Buscar por codigo"

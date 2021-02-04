@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ViperModule"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary      = "Viper module let users see diferent economy indices."
 
   # This description is used to generate tags and improve search results.
