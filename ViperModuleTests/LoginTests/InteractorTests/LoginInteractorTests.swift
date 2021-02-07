@@ -8,11 +8,11 @@
 import XCTest
 import CoreData
 @testable import class ViperModule.LoginInteractor
-@testable import struct ViperModule.UserEntity
-@testable import protocol ViperModule.DataBaseManager
-@testable import protocol ViperModule.LoginPresenterToLoginViewProtocol
-@testable import protocol ViperModule.LoginInteractorToLoginPresenterProtocol
-@testable import protocol ViperModule.LoginPresenterToLoginInteractorProtocol
+import struct ViperModule.UserEntity
+import protocol ViperModule.DataBaseManager
+import protocol ViperModule.LoginPresenterToLoginViewProtocol
+import protocol ViperModule.LoginInteractorToLoginPresenterProtocol
+import protocol ViperModule.LoginPresenterToLoginInteractorProtocol
 
 class LoginInteractorTests: XCTestCase, TestBase {
     var sut: LoginInteractor!

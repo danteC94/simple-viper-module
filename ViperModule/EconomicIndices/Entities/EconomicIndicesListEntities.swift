@@ -12,15 +12,22 @@ struct EconomicIndicesEntity: Decodable {
     let uf: EconomicIndexEntity
     let ivp: EconomicIndexEntity
     let dolar: EconomicIndexEntity
-    let dolar_intercambio: EconomicIndexEntity
+    let dolarIntercambio: EconomicIndexEntity
     let euro: EconomicIndexEntity
     let ipc: EconomicIndexEntity
     let utm: EconomicIndexEntity
     let imacec: EconomicIndexEntity
     let tpm: EconomicIndexEntity
-    let libra_cobre: EconomicIndexEntity
-    let tasa_desempleo: EconomicIndexEntity
+    let libraCobre: EconomicIndexEntity
+    let tasaDesempleo: EconomicIndexEntity
     let bitcoin: EconomicIndexEntity
+
+    enum CodingKeys: String, CodingKey {
+        case version, autor, fecha, uf, ivp, dolar, euro, ipc, utm, imacec, tpm, bitcoin
+        case dolarIntercambio = "dolar_intercambio"
+        case libraCobre = "libra_cobre"
+        case tasaDesempleo = "tasa_desempleo"
+    }
 }
 
 struct EconomicIndexEntity: Decodable {
@@ -38,6 +45,6 @@ struct EconomicIndexEntity: Decodable {
 
 extension EconomicIndicesEntity {
     func getEconomicIndices() -> [EconomicIndexEntity] {
-        return [uf, ivp, dolar, dolar_intercambio, euro, ipc, utm, imacec, tpm, libra_cobre, tasa_desempleo, bitcoin]
+        return [uf, ivp, dolar, dolarIntercambio, euro, ipc, utm, imacec, tpm, libraCobre, tasaDesempleo, bitcoin]
     }
 }

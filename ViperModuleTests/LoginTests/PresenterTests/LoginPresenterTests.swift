@@ -7,12 +7,12 @@
 
 import XCTest
 @testable import class ViperModule.LoginPresenter
-@testable import protocol ViperModule.LoginViewToPresenterProtocol
-@testable import protocol ViperModule.LoginPresenterToLoginViewProtocol
-@testable import protocol ViperModule.LoginPresenterToLoginInteractorProtocol
-@testable import protocol ViperModule.LoginInteractorToLoginPresenterProtocol
-@testable import protocol ViperModule.LoginPresenterToLoginRouterProtocol
-@testable import protocol ViperModule.LoginRouterToLoginPresenterProtocol
+import protocol ViperModule.LoginViewToPresenterProtocol
+import protocol ViperModule.LoginPresenterToLoginViewProtocol
+import protocol ViperModule.LoginPresenterToLoginInteractorProtocol
+import protocol ViperModule.LoginInteractorToLoginPresenterProtocol
+import protocol ViperModule.LoginPresenterToLoginRouterProtocol
+import protocol ViperModule.LoginRouterToLoginPresenterProtocol
 
 class LoginPresenterTests: XCTestCase, TestBase {
     var sut: LoginPresenter!

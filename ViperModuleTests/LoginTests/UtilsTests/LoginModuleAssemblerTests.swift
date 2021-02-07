@@ -9,8 +9,8 @@ import XCTest
 @testable import class ViperModule.LoginModuleAssembler
 @testable import class ViperModule.LoginRouter
 @testable import class ViperModule.LoginViewController
-@testable import protocol ViperModule.LoginRouterToLoginPresenterProtocol
-@testable import protocol ViperModule.LoginInteractorToLoginPresenterProtocol
+import protocol ViperModule.LoginRouterToLoginPresenterProtocol
+import protocol ViperModule.LoginInteractorToLoginPresenterProtocol
 
 class LoginModuleAssemblerTests: XCTestCase, TestBase {
     var sut: LoginModuleAssembler!

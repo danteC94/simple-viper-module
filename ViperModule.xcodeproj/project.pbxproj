@@ -12,6 +12,10 @@
 		FE008C3125C6EC0A00845DE6 /* appLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C3025C6EC0A00845DE6 /* appLauncher.swift */; };
 		FE008C5925C7268600845DE6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C5825C7268600845DE6 /* CoreDataManager.swift */; };
 		FE008C6625C7365100845DE6 /* AESEncrypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE008C6525C7365100845DE6 /* AESEncrypter.swift */; };
+		FE12C6C625D081F000A3B751 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C6C525D081F000A3B751 /* JsonDecoder.swift */; };
+		FE12C6CE25D084F000A3B751 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C6CD25D084F000A3B751 /* LoginViewControllerTests.swift */; };
+		FE12C6E525D092AF00A3B751 /* EconomicIndicesEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE12C6E425D092AF00A3B751 /* EconomicIndicesEntityTests.swift */; };
+		FE12C6EB25D0943600A3B751 /* MockEconomicIndicesEntity.json in Resources */ = {isa = PBXBuildFile; fileRef = FE12C6EA25D0943600A3B751 /* MockEconomicIndicesEntity.json */; };
 		FE7B5E5825C7B73700DE4AE9 /* EconomicInddicesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E5625C7B73700DE4AE9 /* EconomicInddicesListViewController.swift */; };
 		FE7B5E5925C7B73700DE4AE9 /* EconomicInddicesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE7B5E5725C7B73700DE4AE9 /* EconomicInddicesListViewController.xib */; };
 		FE7B5E5D25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5E5C25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift */; };
@@ -63,6 +67,10 @@
 		FE008C3025C6EC0A00845DE6 /* appLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appLauncher.swift; sourceTree = "<group>"; };
 		FE008C5825C7268600845DE6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FE008C6525C7365100845DE6 /* AESEncrypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESEncrypter.swift; sourceTree = "<group>"; };
+		FE12C6C525D081F000A3B751 /* JsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
+		FE12C6CD25D084F000A3B751 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		FE12C6E425D092AF00A3B751 /* EconomicIndicesEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesEntityTests.swift; sourceTree = "<group>"; };
+		FE12C6EA25D0943600A3B751 /* MockEconomicIndicesEntity.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockEconomicIndicesEntity.json; sourceTree = "<group>"; };
 		FE7B5E5625C7B73700DE4AE9 /* EconomicInddicesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicInddicesListViewController.swift; sourceTree = "<group>"; };
 		FE7B5E5725C7B73700DE4AE9 /* EconomicInddicesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EconomicInddicesListViewController.xib; sourceTree = "<group>"; };
 		FE7B5E5C25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomicIndicesProtocols.swift; sourceTree = "<group>"; };
@@ -155,6 +163,46 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		FE12C6C425D081BF00A3B751 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE12C6C525D081F000A3B751 /* JsonDecoder.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FE12C6CB25D0829B00A3B751 /* NetworkMockResponses */ = {
+			isa = PBXGroup;
+			children = (
+				FE12C6EA25D0943600A3B751 /* MockEconomicIndicesEntity.json */,
+			);
+			path = NetworkMockResponses;
+			sourceTree = "<group>";
+		};
+		FE12C6CC25D084CF00A3B751 /* ViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE12C6CD25D084F000A3B751 /* LoginViewControllerTests.swift */,
+			);
+			path = ViewTests;
+			sourceTree = "<group>";
+		};
+		FE12C6E225D0924200A3B751 /* EconomicIndicesTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE12C6E325D0928C00A3B751 /* EntitiesTests */,
+			);
+			path = EconomicIndicesTests;
+			sourceTree = "<group>";
+		};
+		FE12C6E325D0928C00A3B751 /* EntitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE12C6E425D092AF00A3B751 /* EconomicIndicesEntityTests.swift */,
+			);
+			path = EntitiesTests;
+			sourceTree = "<group>";
+		};
 		FE7B5E4E25C7ACC600DE4AE9 /* EconomicIndices */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +274,7 @@
 		FEAD64D425CB729B00DCB781 /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C6CC25D084CF00A3B751 /* ViewTests */,
 				FED4BF7D25D027DD006D1627 /* InteractorTests */,
 				FEAD64EE25CB931600DCB781 /* PresenterTests */,
 				FEAD64E725CB8CC800DCB781 /* UtilsTests */,
@@ -297,6 +346,7 @@
 		FEE434F325C59C5700B15AA9 /* ViperModule */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C6C425D081BF00A3B751 /* Utils */,
 				FE7B5E4E25C7ACC600DE4AE9 /* EconomicIndices */,
 				FE008C2F25C6EB2B00845DE6 /* AppLaunch */,
 				FEE4351425C5AC3D00B15AA9 /* LogIn */,
@@ -309,6 +359,8 @@
 		FEE434FE25C59C5800B15AA9 /* ViperModuleTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE12C6E225D0924200A3B751 /* EconomicIndicesTests */,
+				FE12C6CB25D0829B00A3B751 /* NetworkMockResponses */,
 				FEAD64D525CB72CD00DCB781 /* TestProtocols */,
 				FEAD64D425CB729B00DCB781 /* LoginTests */,
 				FEE434FF25C59C5800B15AA9 /* ViperModuleTests.swift */,
@@ -487,6 +539,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE12C6EB25D0943600A3B751 /* MockEconomicIndicesEntity.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +628,7 @@
 				FE8A639D25CA06B70085D222 /* EconomicIndicesDTOs.swift in Sources */,
 				FE8A63A825CA146C0085D222 /* EconomicIndicesRouter.swift in Sources */,
 				FE8A63A225CA0BE70085D222 /* EconomicIndexTableViewCell.swift in Sources */,
+				FE12C6C625D081F000A3B751 /* JsonDecoder.swift in Sources */,
 				FE8A63B525CA230A0085D222 /* EconomicIndexDetailViewController.swift in Sources */,
 				FE7B5E5D25C7BC6B00DE4AE9 /* EconomicIndicesProtocols.swift in Sources */,
 				FE7B5E6525C7BE9E00DE4AE9 /* EconomicIndicesListInteractor.swift in Sources */,
@@ -591,8 +645,10 @@
 				FEAD64D725CB72EA00DCB781 /* TestBase.swift in Sources */,
 				FEAD64DE25CB75F800DCB781 /* RouterTests.swift in Sources */,
 				FEAD64E925CB8CE600DCB781 /* LoginModuleAssemblerTests.swift in Sources */,
+				FE12C6CE25D084F000A3B751 /* LoginViewControllerTests.swift in Sources */,
 				FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */,
 				FED4BF8125D0282E006D1627 /* LoginInteractorTests.swift in Sources */,
+				FE12C6E525D092AF00A3B751 /* EconomicIndicesEntityTests.swift in Sources */,
 				FEAD64F025CBA08600DCB781 /* LoginPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

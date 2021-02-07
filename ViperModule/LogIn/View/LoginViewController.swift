@@ -19,9 +19,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton! {
         didSet {
             signInButton.backgroundColor = UIColor.init(red: 0,
-                                                   green: 170/255,
-                                                   blue: 70/255,
-                                                   alpha: 1)
+                                                        green: 170/255,
+                                                        blue: 70/255,
+                                                        alpha: 1)
             signInButton.titleLabel?.tintColor = .white
             signInButton.layer.cornerRadius = 15
             signInButton.setTitle("Iniciar sesion", for: .normal)
@@ -34,7 +34,11 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func SignIn(_ sender: Any) {
-        guard let email = self.emailTextField.text, let password = self.passwordTextField.text else { return }
+        self.signIn()
+    }
+
+    func signIn() {
+        guard let email = self.emailTextField.text, email.isEmpty == false, let password = self.passwordTextField.text, password.isEmpty == false else { return }
         self.presenter?.checkCredentials(email: email, pass: password)
     }
 }
