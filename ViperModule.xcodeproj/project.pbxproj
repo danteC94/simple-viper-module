@@ -30,6 +30,7 @@
 		FEAD64E425CB7E1F00DCB781 /* LoginModuleAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64E325CB7E1F00DCB781 /* LoginModuleAssembler.swift */; };
 		FEAD64E925CB8CE600DCB781 /* LoginModuleAssemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64E825CB8CE600DCB781 /* LoginModuleAssemblerTests.swift */; };
 		FEAD64F025CBA08600DCB781 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD64EF25CBA08600DCB781 /* LoginPresenterTests.swift */; };
+		FED4BF8125D0282E006D1627 /* LoginInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED4BF8025D0282E006D1627 /* LoginInteractorTests.swift */; };
 		FEE434FB25C59C5800B15AA9 /* ViperModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE434F125C59C5700B15AA9 /* ViperModule.framework */; };
 		FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE434FF25C59C5800B15AA9 /* ViperModuleTests.swift */; };
 		FEE4350225C59C5800B15AA9 /* ViperModule.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE434F425C59C5700B15AA9 /* ViperModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,6 +81,7 @@
 		FEAD64E325CB7E1F00DCB781 /* LoginModuleAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleAssembler.swift; sourceTree = "<group>"; };
 		FEAD64E825CB8CE600DCB781 /* LoginModuleAssemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleAssemblerTests.swift; sourceTree = "<group>"; };
 		FEAD64EF25CBA08600DCB781 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		FED4BF8025D0282E006D1627 /* LoginInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractorTests.swift; sourceTree = "<group>"; };
 		FEE434F125C59C5700B15AA9 /* ViperModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ViperModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE434F425C59C5700B15AA9 /* ViperModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViperModule.h; sourceTree = "<group>"; };
 		FEE434F525C59C5700B15AA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,7 +226,8 @@
 		FEAD64D425CB729B00DCB781 /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				FEAD64EE25CB931600DCB781 /* LoginPresenterTests */,
+				FED4BF7D25D027DD006D1627 /* InteractorTests */,
+				FEAD64EE25CB931600DCB781 /* PresenterTests */,
 				FEAD64E725CB8CC800DCB781 /* UtilsTests */,
 				FEAD64DC25CB75DD00DCB781 /* RouterTests */,
 			);
@@ -255,12 +258,20 @@
 			path = UtilsTests;
 			sourceTree = "<group>";
 		};
-		FEAD64EE25CB931600DCB781 /* LoginPresenterTests */ = {
+		FEAD64EE25CB931600DCB781 /* PresenterTests */ = {
 			isa = PBXGroup;
 			children = (
 				FEAD64EF25CBA08600DCB781 /* LoginPresenterTests.swift */,
 			);
-			path = LoginPresenterTests;
+			path = PresenterTests;
+			sourceTree = "<group>";
+		};
+		FED4BF7D25D027DD006D1627 /* InteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FED4BF8025D0282E006D1627 /* LoginInteractorTests.swift */,
+			);
+			path = InteractorTests;
 			sourceTree = "<group>";
 		};
 		FEE434E725C59C5700B15AA9 = {
@@ -581,6 +592,7 @@
 				FEAD64DE25CB75F800DCB781 /* RouterTests.swift in Sources */,
 				FEAD64E925CB8CE600DCB781 /* LoginModuleAssemblerTests.swift in Sources */,
 				FEE4350025C59C5800B15AA9 /* ViperModuleTests.swift in Sources */,
+				FED4BF8125D0282E006D1627 /* LoginInteractorTests.swift in Sources */,
 				FEAD64F025CBA08600DCB781 /* LoginPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

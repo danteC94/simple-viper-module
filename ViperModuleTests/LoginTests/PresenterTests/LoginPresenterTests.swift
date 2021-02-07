@@ -62,7 +62,6 @@ class LoginPresenterTests: XCTestCase, TestBase {
 
         XCTAssertTrue(self.router.pushEconomicIndicesModuleCalled)
     }
-
 }
 
 extension LoginPresenterTests {

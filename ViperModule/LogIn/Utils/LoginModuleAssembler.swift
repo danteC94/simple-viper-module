@@ -11,7 +11,7 @@ class LoginModuleAssembler: LoginModuleAssemblerProtocol {
     func assembleModule(router: LoginRouter) -> UIViewController {
         let loginView = LoginViewController(nibName: "LoginViewController", bundle: Bundle(for: LoginViewController.self))
         let presenter = LoginPresenter()
-        let interactor = Interactor()
+        let interactor = LoginInteractor()
 
         loginView.presenter = presenter
         presenter.loginView = loginView

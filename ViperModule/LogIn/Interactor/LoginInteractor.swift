@@ -8,12 +8,12 @@
 import CoreData
 import Foundation
 
-class Interactor {
+class LoginInteractor {
     weak var presenter: LoginInteractorToLoginPresenterProtocol?
     var dbManager: DataBaseManager = CoreDataManager()
 }
 
-extension Interactor: LoginPresenterToLoginInteractorProtocol {
+extension LoginInteractor: LoginPresenterToLoginInteractorProtocol {
     func fetchUser(email: String, pass: String) {
         do {
             guard try self.dbManager.getUser(email: email, password: pass) != nil else {
